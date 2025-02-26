@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get("/places", {:controller => "places", :action => "index"})
   get("/entries", {:controller => "entries", :action => "index"})
 
-  # will do actions for new, create and show. also need resources ???
+  # also need resources instead of gets? ???
 end

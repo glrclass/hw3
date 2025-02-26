@@ -1,0 +1,21 @@
+<!-- Company details page -->
+
+<h1><%= @place["name"] %></h1>
+
+<h3>Travel Log Entries</h3>
+
+<ul>
+  <% for entry in @entries %>
+  <li><%= entry["title"] %> </li> 
+  <li><%= entry["occurred_on"]%> </li>
+  <li><%= entry["description"]%> </li>
+  <% end %>
+</ul>
+
+<p>
+  <a href="/entries/new?place_id=<%= @place["id"]%>">Add New Place</a>
+</p>
+
+<p>
+  <a href="/places">Back to All Places Home Page</a>
+</p>
