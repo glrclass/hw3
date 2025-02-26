@@ -1,14 +1,20 @@
 class EntriesController < ApplicationController
 
-  def new
-    @place = Place.find_by({ "id" => params["place_id"]})
+  def new 
+    #might need something here :  @company = Company.find_by({ "id" => params["company_id"] })
   end
 
   def create
-    @place = Place.new
-    @place["name"] = params["name"]
-    @place.save
-    redirect_to "/places"
+    @entry = Entry.new
+
+    @entry["title"] = params["title"]
+    @entry["occurred_on"] = params["occurred_on"]
+    @entry["description"] = params["description"]
+
+    @entry["place_id"] = params["place_id"]
+
+    @entry.save
+    redirect_to "/places/#{@entry["place_id"]}"
   end
 
 end
