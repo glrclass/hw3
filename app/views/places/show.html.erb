@@ -6,9 +6,9 @@
 
 <ul>
   <% for entry in @entries %>
-  <li><%= entry["title"] %> </li> 
-  <li><%= entry["occurred_on"]%> </li>
-  <li><%= entry["description"]%> </li>
+  <h2><%= entry["title"] %> </h2> 
+  <h4><%= entry["occurred_on"]%> </h4>
+  <%= entry["description"]%>
   <% end %>
 </ul>
 
