@@ -1,7 +1,8 @@
 class EntriesController < ApplicationController
 
   def new 
-    #might need something here :  @company = Company.find_by({ "id" => params["company_id"] })
+    #need this to be able to go back one page
+    @place = Place.find_by({ "id" => params["place_id"] })
   end
 
   def create
